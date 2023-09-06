@@ -1,7 +1,7 @@
 const { Schema, model } = require('mongoose');
 const Thought = require('./Thought');
 
-// Schema to create Post model
+// Schema to create Though model
 const thoughtSchema = new Schema(
   {
     thoughtText: {
@@ -9,7 +9,6 @@ const thoughtSchema = new Schema(
       required: true,
       minLength: 1,
       maxLength: 280,
-      default: false,
     },
     createdAt: {
       type: Date,
@@ -30,7 +29,7 @@ const thoughtSchema = new Schema(
 );
 
 thoughtSchema
-  .virtual('getTags')
+  .virtual('reactionCount')
   // Getter
   .get(function () {
     return this.tags.length;
