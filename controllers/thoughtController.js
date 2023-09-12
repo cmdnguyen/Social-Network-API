@@ -68,8 +68,6 @@ module.exports = {
 
   async deleteThought(req, res) {
     try {
-      console.log("user", req.params.userId)
-      console.log("thought", req.params.thoughtId)
       const thought = await Thought.findOneAndRemove({
         _id: req.params.thoughtId,
       });
@@ -79,8 +77,8 @@ module.exports = {
       }
 
       const user = await User.findOneAndUpdate(
-        { _id: req.params.userId },
-        { $pull: { thoughts: req.params.thoughtId } }, // Remove the thought ID from the 'thoughts' array
+        { thoughts: req.params.thoughtId},
+        { $pull: { thoughts: req.params.thoughtId } },
         { runValidators: true,new: true }
       );
         console.log(user)
