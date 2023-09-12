@@ -13,10 +13,31 @@
 
 ## Installation
 
+To get started, users will have to use a terminal and clone the GitHub repository in their own directory.
 
+    git@github.com:cmdnguyen/Social-Network-API.git
+
+Once cloned, users will need [VSCode](https://code.visualstudio.com/download) and open up the directory. In the terminal, you can use the following commands:
+
+	cd EmployeeTracker
+	code .
+
+Users will also need [NodeJS](https://nodejs.org/en) & [MongoDB](https://coding-boot-camp.github.io/full-stack/mongodb/how-to-install-mongodb) installed. I used the LTS version for Node.
+
+Users will need to install the npm packages needed to run the program. Input the following command in the terminal:
+
+    npm install
 
 ## Usage
 
+There are two ways to start the program. You can use one of the following commands.
+
+    npm start
+    node server
+
+Once the server is running, you can access the database. It will be empty, but you can add, delete and update users and thoughts.
+
+In the example, I already added some users, thoughts, reaction and friends. Here's a demostration of each of the models and schema:
 
 ## Credits
 
