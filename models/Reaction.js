@@ -1,31 +1,42 @@
 const { Schema, Types } = require("mongoose");
 
 const reactionSchema = new Schema(
-    {
-        reactionId: { 
-            type: Schema.Types.ObjectId,
-            default: () => new Types.ObjectId(),
-        },
-        reactionBody: { 
-            type: String, 
-            required: true, 
-            maxLength: 280 
-        },
-        username: {
-            type: String, 
-            required: true
-        },
-        createdAt: {
-            type: Date,
-            default: Date.now,
-          },
+  {
+    reactionId: {
+      type: Schema.Types.ObjectId,
+      default: () => new Types.ObjectId(),
     },
-    {
-        toJSON: {
-          getters: true,
-        },
-        id: false,
-    }
+    reactionBody: {
+      type: String,
+      required: true,
+      maxLength: 280,
+    },
+    username: {
+      type: String,
+      required: true,
+    },
+    createdAt: {
+      type: Date,
+      default: Date.now(),
+      get: function (date) {
+        const options = {
+          year: "numeric",
+          month: "short",
+          day: "2-digit",
+          hour: "2-digit",
+          minute: "2-digit",
+          hour12: true, // Use 12-hour format with AM/PM
+        };
+        return date.toLocaleString(undefined, options);
+      },
+    },
+  },
+  {
+    toJSON: {
+      getters: true,
+    },
+    id: false,
+  }
 );
 
 module.exports = reactionSchema;

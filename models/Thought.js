@@ -12,7 +12,18 @@ const thoughtSchema = new Schema(
     },
     createdAt: {
       type: Date,
-      default: Date.now,
+      default: Date.now(),
+      get: function (date) {
+        const options = {
+          year: "numeric",
+          month: "short",
+          day: "2-digit",
+          hour: "2-digit",
+          minute: "2-digit",
+          hour12: true, // Use 12-hour format with AM/PM
+        };
+        return date.toLocaleString(undefined, options);
+      },
     },
     username: {
       type: String,
@@ -23,6 +34,7 @@ const thoughtSchema = new Schema(
   {
     toJSON: {
       virtuals: true,
+      getters: true,
     },
     id: false,
   }
