@@ -45,6 +45,15 @@ Once the server is running, you can access the database. It will be empty, but y
 
 In the example, I already added some users, thoughts, reaction and friends. Here's a demostration of each of the models and schema:
 
+[Social Media User.webm](https://github.com/cmdnguyen/Social-Network-API/assets/131038401/13bea076-4924-4ba4-a7b1-10bb39345955)
+
+[Social Media Thoughts.webm](https://github.com/cmdnguyen/Social-Network-API/assets/131038401/4863d62d-9fc6-4c17-be16-9021ac0c7043)
+
+[Social Media Friends.webm](https://github.com/cmdnguyen/Social-Network-API/assets/131038401/d8135747-0ad5-4562-b54a-7884875c0f7e)
+
+[Social Media Reaction.webm](https://github.com/cmdnguyen/Social-Network-API/assets/131038401/7d363590-7591-44a3-98c8-de8cb399c2f6)
+
+
 ## Credits
 
 Boot Camp Tutor, Alexis Gonzalez
