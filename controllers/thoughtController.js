@@ -77,11 +77,11 @@ module.exports = {
       }
 
       const user = await User.findOneAndUpdate(
-        { thoughts: req.params.thoughtId},
+        { thoughts: req.params.thoughtId },
         { $pull: { thoughts: req.params.thoughtId } },
-        { runValidators: true,new: true }
+        { runValidators: true, new: true }
       );
-        console.log(user)
+      console.log(user);
       if (!user) {
         return res
           .status(404)
@@ -127,7 +127,7 @@ module.exports = {
         return res.status(404).json({ message: "No thought with that ID" });
       }
 
-      res.json({ message: "Reaction deleted!" });
+      res.json({thought});
     } catch (err) {
       console.log(err);
       res.status(500).json(err);

@@ -4,6 +4,12 @@
 
 ## Description
 
+This is a Social Media API created using MongoDB and Mongoose. It can add, update and remove users and thoughts into the database. You can also create and remove friends and reactions to the associated user and thought respectively.
+
+This API is an easy way to see how users and posts are added into a database for social media. It gives each user and thoughts an ID, which is used to create, update and delete from the database.
+
+This was a challenge learning Mongoose after learning Sequelize, but I was able to pick it up.
+
 ## Table of Contents 
 
 - [Installation](#installation)
@@ -46,6 +52,8 @@ Boot Camp Tutor, Alexis Gonzalez
 Boot Camp Instructor, Eli Montoya
 
 Boot Camp TA, Chandler Green
+
+AskBCS
 
 ChatGPT
 
