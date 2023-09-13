@@ -1,3 +1,4 @@
+// Imports Express Router and the methods from the userController
 const router = require("express").Router();
 
 const {
